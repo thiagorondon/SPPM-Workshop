@@ -62,6 +62,8 @@ __PACKAGE__->add_columns(
   { data_type => "integer", is_auto_increment => 1, is_nullable => 0 },
   "nome",
   { data_type => "text", is_nullable => 0 },
+  "cpf",
+  { data_type => "text", is_nullable => 0 },
   "apelido",
   { data_type => "text", is_nullable => 1 },
   "email",
