@@ -32,6 +32,10 @@ sub inscricao : Chained('object') PathPart('') Args(0) {
     $c->stash->{erro}{celular} = q{Favor fornecer o celular}
         unless $params->{celular};
 
+    $c->stash->{mensagem}{cpf} = q{*};
+    $c->stash->{erro}{cpf} = q{Favor fornecer o celular}
+        unless $params->{cpf};
+
     return if %{$c->stash->{erro} || {}};
     $c->stash->{inscricao}->insert if $c->req->method eq 'POST';
 }
