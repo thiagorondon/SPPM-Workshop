@@ -12,10 +12,14 @@ my %normal = (
     nome    => 'Teste',
     email   => 'teste@teste.com',
     apelido => 'teste',
-    celular => 99999999
+    celular => 99999999,
+    cpf     => 99999999
 );
 my %sem_nome = %normal;
 delete $sem_nome{nome};
+
+my %sem_cpf = %normal;
+delete $sem_cpf{cpf};
 
 my %sem_email = %normal;
 delete $sem_email{email};
@@ -43,6 +47,13 @@ delete $sem_celular{celular};
     die $@ unless $@ =~ /rollback/;
 }
 
+# não pode fazer inscrição sem fornecer cpf
+{
+    my ( $res, $ctx ) = ctx_request( POST '/inscricao', [%sem_cpf] );
+    ok( my $inscricao = $ctx->stash->{inscricao} );
+    ok( !$inscricao->in_storage, 'não faz inscricao sem fornecer cpf' );
+}
+
 # não pode fazer inscrição sem fornecer nome
 {
     my ( $res, $ctx ) = ctx_request( POST '/inscricao', [%sem_nome] );
@@ -61,6 +72,7 @@ delete $sem_celular{celular};
 {
     my ( $res, $ctx ) = ctx_request( POST '/inscricao', [%sem_apelido] );
     ok( my $inscricao = $ctx->stash->{inscricao} );
+    ok( $inscricao->in_storage, 'faz inscrição sem apelido');
     my %columns = $inscricao->get_columns;
     delete $columns{apelido} unless $columns{apelido};
     delete @columns{qw(id confirmado)};
