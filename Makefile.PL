@@ -26,6 +26,7 @@ requires 'Catalyst::Plugin::Session::Store::FastMmap';
 requires 'Catalyst::Plugin::Session::State::Cookie';
 requires 'Catalyst::View::JSON';
 requires 'SQL::Translator' => '0.11006';
+requires 'MooseX::NonMoose';
 
 test_requires 'Test::More' => '0.88';
 catalyst;
