@@ -5,6 +5,9 @@ use namespace::autoclean;
 use Email::Valid;
 use String::Random;
 
+use PagSeguro;
+use PagSeguro::Item;
+
 BEGIN { extends 'Catalyst::Controller'; }
 
 sub base : Chained('/base') : PathPart('inscricao') : CaptureArgs(0) {
@@ -73,7 +76,7 @@ sub confirmar : Chained('base') Args(1) {
     my $inscrito = $rs->find($id);
 
     $c->stash->{erro}{codigo} = q{Código errado}
-      unless uc($c->req->param('codigo')) eq $inscrito->codigo;
+      unless uc( $c->req->param('codigo') ) eq $inscrito->codigo;
 
     return if %{ $c->stash->{erro} || {} };
 
@@ -85,8 +88,34 @@ sub confirmar : Chained('base') Args(1) {
 
 sub pagamento : Chained('base') Args(1) {
     my ( $self, $c, $codigo ) = @_;
-    my $rs = $c->model('DB::Inscricao');
-    $c->stash->{inscrito} = $rs->search({ codigo => $codigo })->first;
+    my $rs       = $c->model('DB::Inscricao');
+    my $inscrito = $c->stash->{inscrito} =
+      $rs->search( { codigo => $codigo, confirmado => 1 } )->first;
+
+    $c->stash->{erro}{codigo} = qw{Pagamento invalido} 
+        unless $inscrito;
+
+    return if %{ $c->stash->{erro} || {} };
+
+    my $pagseguro = PagSeguro->new(
+        email_cobranca => 'shonorio@gmail.com',
+        tipo           => 'CP',
+        cliente_nome  => $inscrito->nome,
+        cliente_email => $inscrito->email
+    );
+
+    $pagseguro->add_items(
+        PagSeguro::Item->new(
+            id    => $inscrito->id,
+            descr => "Perl Workshop SPPM 2011",
+            quant => 1,
+            valor => "20000",
+            frete => 0,
+            peso  => 0
+        )
+    );
+
+    $c->stash->{form} = $pagseguro->make_form;
 }
 
 sub gerar_codigo : Private {

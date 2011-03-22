@@ -1,6 +1,13 @@
 
 <h2>Pagamento</h2>
 
-Nome: [% inscrito.nome %]
-<br/>
+[% INCLUDE retorno.tt %]
+
+[% IF inscrito %]
+
+	Oi [% inscrito.nome %], para pagar ...
+
+	[% form %]
+
+[% END %]
 

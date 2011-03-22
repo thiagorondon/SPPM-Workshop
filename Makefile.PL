@@ -16,6 +16,7 @@ requires 'Catalyst::Plugin::Captcha';
 requires 'Catalyst::Action::RenderView';
 requires 'Email::Valid';
 requires 'String::Random';
+requires 'PagSeguro';
 requires 'Moose';
 requires 'MooseX::Types::CPF';
 requires 'MooseX::Types::Email';
