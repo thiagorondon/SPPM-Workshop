@@ -1,6 +1,17 @@
 
 <h2>Inscrição</h2>
 
+[% IF erro %]
+<div class="erro">
+
+	[% FOREACH key IN erro.keys %]
+		[% erro.$key %]<br/>
+	[% END %]
+
+</div>
+[% END %]
+
+
 <div id="cadastro_pane">
 
 <form name="cadastro" method="POST">
