@@ -22,6 +22,7 @@ use Catalyst qw/
   Session
   Session::Store::FastMmap
   Session::State::Cookie
+  Captcha
   /;
 
 extends 'Catalyst';
@@ -42,8 +43,21 @@ __PACKAGE__->config(
 
     # Disable deprecated behavior needed by old applications
     disable_component_resolution_regex_fallback => 1,
-    default_view => 'TT',
-    default_model => 'DB',
+    default_view                                => 'TT',
+    default_model                               => 'DB',
+
+    'Plugin::Captcha' => {
+        session_name => 'captcha_string',
+        new          => {
+            width   => 160,
+            height  => 60,
+            lines   => 5,
+            gd_font => 'giant',
+        },
+        create   => [qw/normal rect/],
+        particle => [100],
+        out      => { force => 'jpeg' }
+    }
 );
 
 # Start the application

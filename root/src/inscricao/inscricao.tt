@@ -23,6 +23,10 @@
 <p><label for="telefone">Celular:</label>
 <input type="text" name="celular" id="celular" size="25"></p>
 
+<p><label for="captcha">Captcha:</label>
+<img src="/inscricao/captcha" />
+<input type="text" name="captcha" id="captcha" size="25"></p>
+
 <p class="submit"><input type="submit" class="button" id="button" value=" Cadastrar "></p>
 
 </div>
