@@ -1,1 +1,34 @@
-test
+
+<h2>Inscrição</h2>
+
+<div id="cadastro_pane">
+
+<form name="cadastro" method="POST">
+
+<fieldset>
+<legend> Cadastro </legend>
+
+<p><label for="nome">Nome:</label>
+<input type="text" name="nome" id="nome" size="25"></p>
+
+<p><label for="apelido">Apelido:</label>
+<input type="text" name="apelido" id="apelido" size="25"></p>
+
+<p><label for="cpf">CPF:</label>
+<input type="text" name="cpf" id="cpf" size="15"></p>
+
+<p><label for="email">E-mail:</label>
+<input type="text" name="email" id="email" size="25"></p>
+
+<p><label for="telefone">Celular:</label>
+<input type="text" name="celular" id="celular" size="25"></p>
+
+<p class="submit"><input type="submit" class="button" id="button" value=" Cadastrar "></p>
+
+</div>
+
+</fieldset>
+<form>
+
+</div>
+
