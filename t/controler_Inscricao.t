@@ -5,9 +5,7 @@ use Catalyst::Test 'SPPM::WorkShop';
 use HTTP::Request::Common;
 
 ok( my $controller = SPPM::WorkShop->controller('Inscricao') );
-my $c   = SPPM::WorkShop->new;
-my $req = $c->req;
-$req->method('POST');
+
 my %normal = (
     nome    => 'Teste',
     email   => 'teste@teste.com',
