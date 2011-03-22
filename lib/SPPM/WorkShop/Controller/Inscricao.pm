@@ -73,7 +73,7 @@ sub confirmar : Chained('base') Args(1) {
     my $inscrito = $rs->find($id);
 
     $c->stash->{erro}{codigo} = q{Código errado}
-      unless $c->req->param('codigo') eq $inscrito->codigo;
+      unless uc($c->req->param('codigo')) eq $inscrito->codigo;
 
     return if %{ $c->stash->{erro} || {} };
 
