@@ -12,6 +12,7 @@ all_from 'lib/SPPM/WorkShop.pm';
 requires 'Catalyst::Runtime' => '5.80030';
 requires 'Catalyst::Plugin::ConfigLoader';
 requires 'Catalyst::Plugin::Static::Simple';
+requires 'Catalyst::Plugin::Captcha';
 requires 'Catalyst::Action::RenderView';
 requires 'Moose';
 requires 'MooseX::Types::CPF';
