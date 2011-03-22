@@ -5,5 +5,6 @@ create table inscricao (
        apelido text,
        email text not null,
        celular integer not null,
+       codigo text,
        confirmado integer default 0
 );

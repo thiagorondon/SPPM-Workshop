@@ -1,0 +1,13 @@
+
+<h2>Confirmar</h2>
+
+[% INCLUDE retorno.tt %]
+
+<form method="POST">
+
+Codigo: <input type="text" name="codigo" size="8" maxlength="6">
+
+<input type="submit" value=" Confirmar ! ">
+
+</form>
+

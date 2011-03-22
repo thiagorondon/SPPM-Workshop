@@ -1,0 +1,12 @@
+
+[% IF erro %]
+<div class="erro">
+
+[% FOREACH key IN erro.keys %]
+	[% erro.$key %]<br/>
+[% END %]
+
+</div>
+[% END %]
+
+

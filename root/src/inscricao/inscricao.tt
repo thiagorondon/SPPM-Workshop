@@ -1,18 +1,8 @@
 
 <h2>Inscrição</h2>
 
-[% IF erro %]
-<div class="erro">
+[% INCLUDE retorno.tt %]
 
-	[% FOREACH key IN erro.keys %]
-		[% erro.$key %]<br/>
-	[% END %]
-
-</div>
-[% END %]
-
-
-<div id="cadastro_pane">
 
 <form name="cadastro" method="POST">
 
