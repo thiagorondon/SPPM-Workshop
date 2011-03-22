@@ -2,6 +2,7 @@ package SPPM::WorkShop::Controller::Inscricao;
 
 use Moose;
 use namespace::autoclean;
+use Email::Valid;
 
 BEGIN { extends 'Catalyst::Controller'; }
 
@@ -35,7 +36,7 @@ sub inscricao : Chained('object') PathPart('') Args(0) {
 
     $c->stash->{mensagem}{email} = q{*};
     $c->stash->{erro}{email}     = q{Favor fornecer um email}
-      unless $params->{email};
+      unless Email::Valid->address($params->{email});
 
     $c->stash->{mensagem}{celular} = q{*};
     $c->stash->{erro}{celular}     = q{Favor fornecer o celular}
@@ -50,7 +51,7 @@ sub inscricao : Chained('object') PathPart('') Args(0) {
     return unless $c->req->method eq 'POST';
     
     $c->stash->{erro}{captcha} = q{Captcha não confere}
-      unless $c->req->address ne '127.0.0.1'
+      unless $c->req->address eq '127.0.0.1'
           and $c->validate_captcha( $c->req->param('captcha') );
 
     $c->stash->{inscricao}->insert;
