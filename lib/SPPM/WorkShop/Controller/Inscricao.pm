@@ -32,58 +32,8 @@ sub inscricao : Chained('object') PathPart('') Args(0) {
     $c->stash->{erro}{celular} = q{Favor fornecer o celular}
         unless $params->{celular};
 
-    $c->stash->{mensagem}{cpf} = q{*};
-    $c->stash->{erro}{cpf} = q{Favor fornecer o celular}
-        unless $params->{cpf};
-
     return if %{$c->stash->{erro} || {}};
     $c->stash->{inscricao}->insert if $c->req->method eq 'POST';
-}
-
-sub cadastro : Chained('base') : Args(0) {
-    my ( $self, $c ) = @_;
-    $c->forward('handle_POST');
-    sleep(3); # js tests.
-    #$c->stash->{insert} = $c->model('DB::Usuario')->cadastrar($c->req->body_paramaters);
-    $c->forward('handle_JSON');
-}
-
-sub login : Chained('base') : Args(0) {
-    my ($self, $c) = @_;
-    $c->forward('handle_POST');
-    $c->stash->{login} = $c->model('Authentication')->login;
-    $c->forward('handle_JSON');
-}
-
-sub logout : Chained('base') : Args(0) {
-    my ($self, $c) = @_;
-    $c->logout;
-    $c->forward('handle_JSON');
-}
-
-sub planos : Chained('base') : Args(0) {
-    my ($self, $c) = @_;
-    $c->stash->{planos} = [ ];
-    $c->forward('handle_JSON');
-}
-
-sub boleto : Chained('base') : Args(0) {
-    my ($self, $c) = @_;
-    $c->stash->{boleto} = 1;
-    $c->forward('handle_JSON');
-}
-
-sub handle_JSON : Private {
-    my ( $self, $c ) = @_;
-    $c->detach('View::JSON');
-}
-
-sub handle_POST : Private {
-    my ( $self, $c ) = @_;
-
-    my $meth = $c->req->method;
-    $c->detach('handle_JSON') if $meth eq 'GET';
-    $c->detach('/error_404') unless $meth eq 'POST';
 }
 
 __PACKAGE__->meta->make_immutable;
