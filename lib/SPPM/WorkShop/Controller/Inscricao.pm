@@ -33,6 +33,8 @@ sub inscricao : Chained('object') PathPart('') Args(0) {
     my ( $self, $c ) = @_;
     my $params = $c->req->body_parameters;
 
+	return unless $c->req->method eq 'POST';
+
     $c->stash->{mensagem}{nome} = q{*};
     $c->stash->{erro}{nome}     = q{Favor fornecer o nome completo}
       unless $params->{nome};

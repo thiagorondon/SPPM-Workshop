@@ -26,13 +26,26 @@ Standard 404 error page
 
 =cut
 
-sub default : Private {
+sub base : Chained('/') PathPart('') CaptureArgs(0) {}
+
+sub root : Chained('/base') PathPart('') Args(0) {}
+
+sub programacao : Chained('/base') Args(0) {}
+
+sub local : Chained('/base') Args(0) {}
+
+sub palestrantes : Chained('/base')  Args(0) {}
+
+sub evento : Chained('/base') Args(0) {}
+
+sub error : Chained('base') : PathPart {
+}
+
+sub error_404 :Chained('base') PathPart('') Args {
     my ( $self, $c ) = @_;
     $c->response->body('Page not found');
     $c->response->status(404);
 }
-
-sub base : Chained('/') : PathPart('') : CaptureArgs(0) {}
 
 =head2 end
 
