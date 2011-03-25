@@ -1,3 +1,100 @@
 
-<h2>Programacao</h2>
+<h2>Programa&ccedil;&atilde;o: </h2>
+<br />
 
+<center>
+<div class="round">
+
+<table cellspacing=0 cellpadding=0 class="programacao">
+	<tr class="titulo1">
+		<td class="horario">
+			8h
+		</td>
+		<td colspan="3" class="titulo">
+			CREDENCIAMENTO
+		</td>
+	</tr>
+	<tr class="dados">
+		<td class="horario">
+			9h
+		</td>
+		<td colspan="3">
+			Brian d Foy: Perl 5
+		</td>
+	</tr>
+	<tr class="dados">
+		<td class="horario">
+			10h
+		</td>
+		<td colspan="3">
+			Brad FritzPatrick:  "Camlistore, um sistema de storage voltado para a web"
+		</td>
+	</tr>
+	<tr class="dados">
+		<td class="horario">
+			11h30
+		</td>
+		<td colspan="3">
+			Larry Wall: Entrevista
+		</td>
+	</tr>
+	<tr class="titulo2">
+		<td>
+			
+		</td>
+		<td class="titulo">
+			Audit&oacute;rio
+		</td>
+		<td class="titulo">
+			Sala 1
+		</td>
+		<td class="titulo">
+			Sala 2
+		</td>
+	</tr>
+	<tr class="dados">
+		<td class="horario">
+			13h30
+		</td>
+		<td>
+			Vagner Diniz, W3C
+		</td>
+		<td>
+			Solli, MongoDB
+		</td>
+		<td>
+			Eden, 'Classes Remotas'
+		</td>
+	</tr>
+	<tr class="dados">
+		<td class="horario">
+			14h30
+		</td>
+		<td>
+			Wagner, OWASP
+		</td>
+		<td>
+			Thiago Rondon (?)
+		</td>
+		<td>
+			Breno, Devel::Cover
+		</td>
+	</tr>
+	<tr class="dados">
+		<td class="horario">
+			15h30
+		</td>
+		<td>
+			Rodrigo Campos, Capacity Plan
+		</td>
+		<td>
+			indefinido
+		</td>
+		<td>
+			Alexei, DataFlow
+		</td>
+	</tr>
+</table>
+
+</div>
+</center>

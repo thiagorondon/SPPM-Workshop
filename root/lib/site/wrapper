@@ -56,13 +56,16 @@ lang="en" xml:lang="en">
         </div> 
     </div> 
     <div id="panelcontainer"> 
-    <!--<div id="leftpanel">
+    <div id="leftpanel">
       <ul>
-        <li>Inscriçoes</li>
-        <li>Palestras</li>
-        <li>blah blah</li>
+		<li><a href="/">Capa</a></li>
+        <li><a href="/evento">Evento</a></li>
+		<li><a href="/inscricao">Inscrições</a></li>
+        <li><a href="/palestrantes">Palestrantes</a></li>
+        <li><a href="/programacao">Programação</a></li>
+		<li><a href="/local">Local</a></li>
       </ul>
-    </div>--> 
+    </div>
     <div id="twitterbox"> 
         <script src="http://widgets.twimg.com/j/2/widget.js"></script> 
         <script> 
@@ -81,7 +84,7 @@ lang="en" xml:lang="en">
               color: '#ffffff'
             },
             tweets: {
-              background: '#ffa600',
+              background: '#ffffff',
               color: '#000000',
               links: '#444444'
             }

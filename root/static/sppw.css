@@ -1,7 +1,6 @@
-* {
+div, ul, li, a, h3, h2, h1 {
     margin: 0;
     padding: 0;
-    border: 0;
 }
 body {
     background: #ffa500 url(/static/images/site/sppw-background-stripes.png) no-repeat top right;
@@ -58,6 +57,29 @@ body {
     margin-right: auto;
     text-align: left;
 }
+input{
+	font-size: 11pt;
+	padding: 2px;
+	border: 1px solid #7eb3e7;
+	padding: 3px;
+}
+
+input[type="submit"], input[type="button"] {
+	border: 1px solid #000;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size: 11pt;
+	font-weight: bold;
+	color: #000;
+	text-shadow: 1px 1px #ca8300;
+	text-transform: uppercase;
+	letter-spacing:0.05em;
+	background-color: #ffa500;
+}
+input[type="submit"]:hover, input[type="button"]:hover {
+	background-color: #ffcc00;
+}
 
 #maincontainer {
     display: inline-block;
@@ -66,13 +88,33 @@ body {
     width: 750px;
 }
 
+fieldset{
+	border: 1px solid #f0f0f0;
+	padding: 5px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+fieldset legend{
+	padding: 0.2em 0.5em;
+}
+table td.label{
+	text-align: right;
+	padding-right: 3px;
+}
 #main {
-    padding: 10px;
+    padding: 20px;
     -moz-border-radius: 10px;
     -moz-box-shadow: #000 0px 2px 2px 0px;
     -webkit-border-radius: 10px;
     -webkit-box-shadow: #000 0px 2px 2px 0px;
     background: #FFF;
+}
+#main h1{
+	font-size: 12pt;
+	color: #1e90ff;
+}
+#main h2{
+	color: #1e90ff;
 }
 #main h3 {
     margin-top: 8px;
@@ -94,6 +136,8 @@ body {
     margin-bottom: 10px;
 }
 #panelcontainer {
+	margin: 0;
+	padding: 0;
     display: inline-block;
     float: left;
     margin-left: 10px;
@@ -102,7 +146,6 @@ body {
 }
 #leftpanel {
     padding: 10px;
-    height: 400px;
     background: #FC0;
     -moz-border-radius: 15px;
     -moz-box-shadow: #000 0px 2px 2px 0px;
@@ -111,6 +154,18 @@ body {
 }
 #leftpanel li {
     list-style-type: none;
+	padding: 5px;
+	border-bottom: 1px solid #f2c200;
+}
+
+#leftpanel li  a, #leftpanel li  a:visited{
+    color: #000;
+	text-decoration: none;
+	font-size: 14pt;
+	letter-spacing: 0.2em;
+}
+#leftpanel li  a:hover{
+	color: #6d5700;
 }
 
 #twitterbox {
@@ -144,4 +199,136 @@ body {
 }
 #copy img {
     vertical-align: middle;
+}
+
+
+#slideshow {
+	margin:0 auto;
+	width:721px;
+	height:173px;
+	background:transparent url(/static/images/bg_slide.gif) no-repeat 0 0;
+	position:relative;
+}
+#slideshow #slidesContainer {
+  margin:0 auto;
+  width:681px;
+  height:173px;
+  overflow:auto; /* allow scrollbar */
+  position:relative;
+}
+#slideshow #slidesContainer .slide {
+  margin:0 auto;
+  width:641px; /* reduce by 20 pixels of #slidesContainer to avoid horizontal scroll */
+  height:173px;
+}
+
+/** 
+ * Slideshow controls style rules.
+ */
+.control {
+  display:block;
+  width:39px;
+  height:173px;
+  text-indent:-10000px;
+  position:absolute;
+  cursor: pointer;
+}
+#leftControl {
+  top:0;
+  left:0;
+  background:transparent url(/static/images/control-left.png) no-repeat 0 0;
+}
+#rightControl {
+  top:0;
+  right:0;
+  background:transparent url(/static/images/control-right.png) no-repeat 0 0;
+}
+
+.slide .nome {
+	font-size: 14pt;
+	font-style: italic;
+	font-weight: bolder;
+	color: #1e90ff;
+}
+.slide p {
+  margin:10px;
+  margin-right: 25px;
+  font-size: 0.9em;
+}
+.slide img {
+  float:right;
+  margin:0 15px;
+  border: 1px solid #c2dbf4;
+}
+
+table.programacao td{
+	padding: 3px;
+}
+table.programacao tr.titulo1 td.titulo{
+	text-align: center;
+	background-color: #e5f2ff;
+}
+table.programacao tr.titulo2 td.titulo{
+	font-weight: bolder;
+	text-align: center;
+	background-color: #bfdfff;
+}
+table.programacao tr.dados td, table.programacao tr.titulo1 td, table.programacao tr.titulo2 td{
+	border-bottom: 1px solid #eadda7;
+}
+table.programacao tr.dados td{
+	text-align: center;
+	padding: 3px 10px;
+}
+table.programacao td.horario{
+	text-align: center;
+	background-color: #fff4c8;
+	font-weight: none;
+	padding: 3px 8px;
+}
+div.round{
+	margin: auto;
+	border: 1px solid #ccc;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	padding: 5px;
+	display:-moz-inline-stack;
+	display:inline-block;
+	zoom:1;
+	*display:inline;
+}
+div.roundG{
+	margin: auto;
+	border: 1px solid #ccc;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	padding: 10px;
+	display:-moz-inline-stack;
+	display:inline-block;
+	zoom:1;
+	*display:inline;
+	background-color: #f5f5f5;
+}
+div.roundS{
+	border: 1px solid #ccc;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	padding: 5px;
+}
+div.patrocinio table tr td{
+	font-size: 0.8em;
+	color: #555;
+}
+div.patrocinio table tr td img{
+	padding: 0px 8px;
+}
+div.patrocinio table tr td span.titulo{
+	font-size: 11pt;
+	font-weigth: bolder;
+	color: #1e90ff;
+}
+div.palestrante img{
+	float: left;
+	margin: 0px 10px 0px 0px;
+	border: 1px solid #ccc;
 }

@@ -1,3 +1,12 @@
 
 <h2>Palestrantes</h2>
 
+<div class="roundG">
+	
+	<div class="palestrante">
+		<img src="/static/images/brad.jpg" border="0">
+		<h2>Non Non Non</h2>
+		Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+	</div>
+	
+</div>

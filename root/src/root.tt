@@ -1,2 +1,122 @@
+<script type="text/javascript">
+$(document).ready(function(){
+  var currentPosition = 0;
+  var slideWidth = 681;
+  var slides = $('.slide');
+  var numberOfSlides = slides.length;
 
-<h2>root</h2>
+  // Remove scrollbar in JS
+  $('#slidesContainer').css('overflow', 'hidden');
+
+  // Wrap all .slides with #slideInner div
+  slides
+    .wrapAll('<div id="slideInner"></div>')
+    // Float left to display horizontally, readjust .slides width
+	.css({
+      'float' : 'left',
+      'width' : slideWidth
+    });
+
+  // Set #slideInner width equal to total width of all slides
+  $('#slideInner').css('width', slideWidth * numberOfSlides);
+
+  // Insert controls in the DOM
+  $('#slideshow')
+    .prepend('<span class="control" id="leftControl">Clicking moves left</span>')
+    .append('<span class="control" id="rightControl">Clicking moves right</span>');
+
+  // Hide left arrow control on first load
+  manageControls(currentPosition);
+
+  // Create event listeners for .controls clicks
+  $('.control')
+    .bind('click', function(){
+	clearInterval(intSlide);
+    // Determine new position
+	currentPosition = ($(this).attr('id')=='rightControl') ? currentPosition+1 : currentPosition-1;
+	// Hide / show controls
+    manageControls(currentPosition);
+    // Move slideInner using margin-left
+    $('#slideInner').animate({
+      'marginLeft' : slideWidth*(-currentPosition)
+    });
+  });
+
+  // manageControls: Hides and Shows controls depending on currentPosition
+  function manageControls(position){
+    // Hide left arrow if position is first slide
+	if(position==0){ $('#leftControl').hide() } else{ $('#leftControl').show() }
+	// Hide right arrow if position is last slide
+    if(position==numberOfSlides-1){ $('#rightControl').hide() } else{ $('#rightControl').show() }
+  }
+	intSlide = setInterval(function() {
+		if (currentPosition < numberOfSlides-1){
+			currentPosition = currentPosition+1;
+			manageControls(currentPosition);
+			$('#slideInner').animate({
+		      'marginLeft' : slideWidth*(-currentPosition)
+		    });
+		}else{
+			currentPosition = 0;
+			manageControls(currentPosition);
+			$('#slideInner').animate({
+		      'marginLeft' : slideWidth*(-currentPosition)
+		    });
+		}
+	}, 5000);
+});
+
+</script>
+
+ <div id="slideshow">
+    <div id="slidesContainer">
+      <div class="slide">
+        <p><img src="/static/images/brian.jpg" /><span class="nome">Brian d Foy</span><br />Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="slide">
+        <p><img src="/static/images/brad.jpg" /><span class="nome">Brad FritzPatrick</span><br />Brad Fitzpatrick &eacute; o fundador da <a href="http://danga.com">Danga</a> e um ativo contribuidor da comunidade Perl. A Danga fundou projetos como <a href="http://livejournal.com">livejournal</a>, <a href="http://memcached.org">memcached</a>,
+      	<a href="http://gearman.org">gearman</a> e <a href="http://mogilefs.org">mogilefs</a>. Atualmente, trabalha para <a href="http://google.com">google.com</a>. Em sua primeira vinda ao
+		Brasil, ir&aacute; palestrar em primeira m&atilde;o sobre seu novo projeto,
+		o <a href="http://camlistore.org">camlistore</a>, um sistema de storage voltado para a web.</p>
+        <p> 
+      </div>
+      <div class="slide">
+        <p><img src="/static/images/larry.jpg" /><span class="nome">Larry Wall</span><br />Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+      </div>
+    </div>
+  </div>
+  <br />
+  <div class="patrocinio">
+	<table width="100%">
+	  	<tr>
+			<td colspan="2"><span class="titulo">Patroc&iacute;nio:</span></td>
+			<td><span class="titulo">Organiza&ccedil;&atilde;o:</span></td>
+		</tr>
+	  	<tr>
+			<td>Gold:</td>
+			<td><img src="/static/images/logo_estantevirtual.gif" border="0"></td>
+			<td>
+				<img src="/static/images/logo_spperlmongers.gif" border="0">
+			</td>
+		</tr>
+	  	<tr>
+			<td>Silver:</td>
+			<td>
+				<img src="/static/images/logo_caelum.gif" border="0">
+				<img src="/static/images/logo_globo.gif" border="0">
+				<img src="/static/images/logo_locaweb.gif" border="0">
+			</td>
+			<td><span class="titulo">Apoio:</span></td>
+		</tr>
+		<tr>
+			<td>
+			</td>
+			<td>
+			</td>
+			<td>
+				<img src="/static/images/logo_w3c.gif" border="0">
+				<img src="/static/images/logo_oreilly.gif" border="0">
+			</td>
+		</tr>
+	</table>
+   </div>

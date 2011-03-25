@@ -1,39 +1,87 @@
+<script language="javascript">
+	$(document).ready(function() {	
+        $("#celular").mask("(99)9999-9999");
+    });
+</script>
 
-<h2>Inscrição</h2>
+
+<h2>Inscri&ccedil;&atilde;o</h2>
 
 [% INCLUDE retorno.tt %]
 
 
 <form name="cadastro" method="POST">
 
-<fieldset>
-<legend> Cadastro </legend>
 
-<p><label for="nome">Nome:</label>
-<input type="text" name="nome" id="nome" size="25"></p>
+	Non Non Non Non Non Non Non Non Non Non <br />
+	Non Non Non Non Non Non Non Non Non 
 
-<p><label for="apelido">Apelido:</label>
-<input type="text" name="apelido" id="apelido" size="25"></p>
 
-<p><label for="cpf">CPF:</label>
-<input type="text" name="cpf" id="cpf" size="15"></p>
-
-<p><label for="email">E-mail:</label>
-<input type="text" name="email" id="email" size="25"></p>
-
-<p><label for="telefone">Celular:</label>
-<input type="text" name="celular" id="celular" size="25"></p>
-
-<p><label for="captcha">Captcha:</label>
-<img src="/inscricao/captcha" />
-<input type="text" name="captcha" id="captcha" size="25"></p>
-
-<p class="submit"><input type="submit" class="button" id="button" value=" Cadastrar "></p>
-
+<div class="roundS">
+<table cellpadding="4">
+	<tr>
+		<td class="label">
+			Nome:
+		</td>
+		<td>
+			<input type="text" name="nome" id="nome" size="35">
+		</td>
+	</tr>
+	<tr>
+		<td class="label">
+			Apelido:
+		</td>
+		<td>
+			<input type="text" name="apelido" id="apelido" size="25">
+		</td>
+	</tr>
+	<tr>
+		<td class="label">
+			CPF:
+		</td>
+		<td>
+			<input type="text" name="cpf" id="cpf" size="18">
+		</td>
+	</tr>
+	<tr>
+		<td class="label">
+			E-mail:
+		</td>
+		<td>
+			<input type="text" name="email" id="email" size="35">
+		</td>
+	</tr>
+	<tr>
+		<td class="label">
+			Celular:
+		</td>
+		<td>
+			<input type="text" name="celular" id="celular" size="25">
+		</td>
+	</tr>
+	<tr>
+		<td class="label">
+			Digite o c&oacute;digo abaixo:
+		</td>
+		<td>
+			<input type="text" name="captcha" id="captcha" size="18">
+		</td>
+	</tr>
+	<tr>
+		<td class="label">
+		</td>
+		<td>
+			<img src="/inscricao/captcha" />
+		</td>
+	</tr>
+	<tr>
+		<td class="label">
+		</td>
+		<td>
+			<input type="submit" class="button" id="button" value=" Cadastrar ">
+		</td>
+	</tr>
+</table>
 </div>
-
-</fieldset>
 <form>
-
-</div>
 
