@@ -53,8 +53,11 @@ __PACKAGE__->config(
             height  => 60,
             lines   => 5,
             gd_font => 'giant',
+            bgcolor => '#ffa500',
+            ptsize  => 30,
+            font => join( '/', __PACKAGE__->path_to('fonts'), 'StayPuft.ttf' ),
         },
-        create   => [qw/normal rect/],
+        create   => [qw/ttf ec #ffffff/],
         particle => [100],
         out      => { force => 'jpeg' }
     }

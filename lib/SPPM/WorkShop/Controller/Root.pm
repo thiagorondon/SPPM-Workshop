@@ -38,6 +38,8 @@ sub palestrantes : Chained('/base')  Args(0) {}
 
 sub evento : Chained('/base') Args(0) {}
 
+sub faq : Chained('/base') Args(0) {}
+
 sub error : Chained('base') : PathPart {
 }
 

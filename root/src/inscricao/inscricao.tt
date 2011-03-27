@@ -12,11 +12,10 @@
 
 <form name="cadastro" method="POST">
 
-
-	Non Non Non Non Non Non Non Non Non Non <br />
-	Non Non Non Non Non Non Non Non Non 
-
-
+<p>
+As inscri&ccedil;&otilde;es ser&atilde;o realizadas atrav&eacute;s deste formulario. O valor das inscri&ccedil;&otilde;es &eacute; de R$ 200,00, basta preencher os dados abaixo e efetuar o pagamento.
+</p>
+ 
 <div class="roundS">
 <table cellpadding="4">
 	<tr>
@@ -32,15 +31,7 @@
 			Apelido:
 		</td>
 		<td>
-			<input type="text" name="apelido" id="apelido" size="25">
-		</td>
-	</tr>
-	<tr>
-		<td class="label">
-			CPF:
-		</td>
-		<td>
-			<input type="text" name="cpf" id="cpf" size="18">
+			<input type="text" name="apelido" id="apelido" size="35">
 		</td>
 	</tr>
 	<tr>
@@ -51,12 +42,22 @@
 			<input type="text" name="email" id="email" size="35">
 		</td>
 	</tr>
+	
+	<tr>
+		<td class="label">
+			CPF:
+		</td>
+		<td>
+			<input type="text" name="cpf" id="cpf" size="14">
+		</td>
+	</tr>
+
 	<tr>
 		<td class="label">
 			Celular:
 		</td>
 		<td>
-			<input type="text" name="celular" id="celular" size="25">
+			<input type="text" name="celular" id="celular" size="14">
 		</td>
 	</tr>
 	<tr>
@@ -64,7 +65,7 @@
 			Digite o c&oacute;digo abaixo:
 		</td>
 		<td>
-			<input type="text" name="captcha" id="captcha" size="18">
+			<input type="text" name="captcha" id="captcha" size="14">
 		</td>
 	</tr>
 	<tr>

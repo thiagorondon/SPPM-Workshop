@@ -109,6 +109,13 @@ table td.label{
     -webkit-box-shadow: #000 0px 2px 2px 0px;
     background: #FFF;
 }
+#main ul,li {
+    padding: 12px;
+	padding-right: 20px;
+	list-style-type: 'square';
+	list-style-position: 'inside';
+}
+
 #main h1{
 	font-size: 12pt;
 	color: #1e90ff;
@@ -286,6 +293,10 @@ table.programacao td.horario{
 	font-weight: none;
 	padding: 3px 8px;
 }
+div.question {
+	font-weight: bold;
+}
+
 div.round{
 	margin: auto;
 	border: 1px solid #ccc;
@@ -296,6 +307,7 @@ div.round{
 	display:inline-block;
 	zoom:1;
 	*display:inline;
+	width: 90%;
 }
 div.roundG{
 	margin: auto;
