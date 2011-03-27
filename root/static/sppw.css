@@ -269,6 +269,7 @@ table td.label{
 }
 
 table.programacao td{
+	font-size: 0.9em;
 	padding: 3px;
 }
 table.programacao tr.titulo1 td.titulo{

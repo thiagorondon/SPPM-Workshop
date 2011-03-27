@@ -26,7 +26,7 @@ sub object : Chained('base') PathPart('') CaptureArgs(0) {
 
     my $params = $c->req->body_parameters;
     delete $params->{captcha};
-    my $obj = $c->stash->{inscricao} = $rs->find_or_new($params);
+    $c->stash->{inscricao} = $rs->new($params);
 }
 
 sub inscricao : Chained('object') PathPart('') Args(0) {

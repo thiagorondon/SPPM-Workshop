@@ -1,9 +1,9 @@
 
 <h2>Programa&ccedil;&atilde;o: </h2>
-<br />
 
+<div class="round">
 <p>
-Abaixo a programa&ccedil;&atilde; do evento, as palestras que ser&atilde;o apresentadas em ingl&eacute;s ter&atilde;o a disponibilidade de tradutores.
+Abaixo a programa&ccedil;&atilde; do evento, as palestras que ser&atilde;o apresentadas em ingl&ecirc;s ter&aacute; tradu&ccedil;&atilde;o simultanea.
 </p>
 
 <center>
@@ -23,7 +23,7 @@ Abaixo a programa&ccedil;&atilde; do evento, as palestras que ser&atilde;o apres
 			9h
 		</td>
 		<td colspan="3">
-			Brian d Foy: Perl 5
+			Brian d Foy: Moose 
 		</td>
 	</tr>
 	<tr class="dados">
@@ -39,7 +39,7 @@ Abaixo a programa&ccedil;&atilde; do evento, as palestras que ser&atilde;o apres
 			11h30
 		</td>
 		<td colspan="3">
-			Larry Wall: Entrevista
+			Larry Wall
 		</td>
 	</tr>
 	<tr class="titulo2">
@@ -61,13 +61,13 @@ Abaixo a programa&ccedil;&atilde; do evento, as palestras que ser&atilde;o apres
 			13h30
 		</td>
 		<td>
-			Vagner Diniz, W3C
+			Vagner Diniz,<br/> W3C,&nbsp;Formatos&nbsp;abertos
 		</td>
 		<td>
-			Solli, MongoDB
+			Solli&nbsp;Honorio,<br/>Relacionamento&nbsp;com&nbsp;MongoDB
 		</td>
 		<td>
-			Eden, 'Classes Remotas'
+			Eden Cardim,<br/> Classes Remotas
 		</td>
 	</tr>
 	<tr class="dados">
@@ -75,13 +75,13 @@ Abaixo a programa&ccedil;&atilde; do evento, as palestras que ser&atilde;o apres
 			14h30
 		</td>
 		<td>
-			Wagner, OWASP
+			Wagner Elias,<br/>OWASP
 		</td>
 		<td>
-			Thiago Rondon (?)
+			()
 		</td>
 		<td>
-			Breno, Devel::Cover
+			Alexei Znamensky,<br/>DataFlow
 		</td>
 	</tr>
 	<tr class="dados">
@@ -89,16 +89,18 @@ Abaixo a programa&ccedil;&atilde; do evento, as palestras que ser&atilde;o apres
 			15h30
 		</td>
 		<td>
-			Rodrigo Campos, Capacity Plan
+			Rodrigo Campos,<br/>Capacity Plan
 		</td>
 		<td>
-			indefinido
+		 ()	
 		</td>
 		<td>
-			Alexei, DataFlow
+			Breno Oliveira,<br/>Devel::Cover
 		</td>
 	</tr>
 </table>
 
 </div>
 </center>
+
+</div>

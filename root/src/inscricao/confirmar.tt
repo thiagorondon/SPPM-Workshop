@@ -1,13 +1,19 @@
 
-<h2>Confirmar</h2>
+<h2>Confirmar e-mail ou celular.</h2>
 
+<div class="round">
 [% INCLUDE retorno.tt %]
 
+<p>
+Digite o c&oacute;digo que foi enviado para o seu e-mail e o seu celular, para efetuarmos a valida&ccedil;&atilde;o do cadastro.
+</p>
+
+<center>
 <form method="POST">
-
-Codigo: <input type="text" name="codigo" size="8" maxlength="6">
-
+C&oacute;digo: <input type="text" name="codigo" size="8" maxlength="6">
 <input type="submit" value=" Confirmar ! ">
+</center>
 
 </form>
+</div>
 

@@ -1,9 +1,3 @@
-<script language="javascript">
-	$(document).ready(function() {	
-        $("#celular").mask("(99)9999-9999");
-    });
-</script>
-
 
 <h2>Inscri&ccedil;&atilde;o</h2>
 
@@ -12,18 +6,18 @@
 
 <form name="cadastro" method="POST">
 
+<div class="roundS">
 <p>
 As inscri&ccedil;&otilde;es ser&atilde;o realizadas atrav&eacute;s deste formulario. O valor das inscri&ccedil;&otilde;es &eacute; de R$ 200,00, basta preencher os dados abaixo e efetuar o pagamento.
 </p>
  
-<div class="roundS">
 <table cellpadding="4">
 	<tr>
 		<td class="label">
 			Nome:
 		</td>
 		<td>
-			<input type="text" name="nome" id="nome" size="35">
+			<input type="text" name="nome" id="nome" size="35" maxlength="250">
 		</td>
 	</tr>
 	<tr>
@@ -31,7 +25,7 @@ As inscri&ccedil;&otilde;es ser&atilde;o realizadas atrav&eacute;s deste formula
 			Apelido:
 		</td>
 		<td>
-			<input type="text" name="apelido" id="apelido" size="35">
+			<input type="text" name="apelido" id="apelido" size="35" maxlength="250">
 		</td>
 	</tr>
 	<tr>
@@ -39,7 +33,7 @@ As inscri&ccedil;&otilde;es ser&atilde;o realizadas atrav&eacute;s deste formula
 			E-mail:
 		</td>
 		<td>
-			<input type="text" name="email" id="email" size="35">
+			<input type="text" name="email" id="email" size="35" maxlength="250">
 		</td>
 	</tr>
 	
@@ -65,7 +59,7 @@ As inscri&ccedil;&otilde;es ser&atilde;o realizadas atrav&eacute;s deste formula
 			Digite o c&oacute;digo abaixo:
 		</td>
 		<td>
-			<input type="text" name="captcha" id="captcha" size="14">
+			<input type="text" name="captcha" id="captcha" size="14" maxlength="8">
 		</td>
 	</tr>
 	<tr>
