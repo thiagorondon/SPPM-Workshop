@@ -4,9 +4,51 @@
 <div class="roundG">
 	
 	<div class="palestrante">
-		<img src="/static/images/brad.jpg" border="0">
-		<h2>Non Non Non</h2>
-		Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+		<img src="/static/images/larry.jpg" border="0">
+		<h2>Larry Wall</h2>
+	<p>
+Graduado em Berkley, cristão fervoroso, autor do patch, do rn e da
+linguagem Perl, entre outras proezas, Larry Wall é a figura mais
+carismática do universo Perl e dispensa apresentações. Também
+trabalhou no renomado Laboratório de Propulsão a Jato da NASA e é
+co-autor do livro Programming Perl, "A" referência em Perl. Famoso por
+seu senso de humor único e um forte embasamento linguístico, desenhou
+Perl com uma expressividade comparável à linguagem natural, de forma a
+facilitar as tarefas fáceis sem tornar as difíceis impossíveis. É
+definiftivamente uma cara em quem se inspirar.</p>
 	</div>
 	
+
+	<div class="palestrante">
+		<img src="/static/images/brad.jpg" border="0">
+		<h2>Brad Fitzpatrick</h2>
+	<p>Fundador da <a href="http://danga.com">
+Danga</a> e um ativo contribuidor da comunidade Perl. A Danga fundou projetos
+como <a href="http://livejournal.com">livejournal</a>,
+<a href="http://memcached.org">memcached</a>, <a href="http://gearman.org">
+gearman</a> e <a href="http://mogilefs.org">mogilefs</a>. Atualmente, trabalha
+para <a href="http://google.com">google.com</a>. Em sua primeira vinda ao
+Brasil, irá palestrar em primeira mão sobre seu novo projeto, o
+<a href="http://camlistore.org">camlistore</a>, um sistema de storage voltado
+para a web.</p>	
+	</div>
+	
+	<div class="palestrante">
+		<img src="/static/images/brian.jpg" border="0">
+		<h2>brian d foy</h2>
+	<p>
+ um cara legal apaixonado por Perl e uma referência dentro
+da comunidade, é autor e co-autor de vários livros, como Learning
+Perl, Intermediate Perl e Mastering Perl, bem como de vários módulos
+no CPAN. Entre 1998 e 2009 ele trabalhou na Stonehenge Consulting
+Services. Nesse meio tempo ainda arrumou uma folguinha para ser
+fundador do Perl Mongers, do White Camel Awards e ainda é figurinha
+carimbada em diversos eventos sobre Perl ao redor do Mundo. Quer mais?
+Ele ainda é mantenedor da perlfaq
+</p>	
+
+
+	</div>
+	
+
 </div>

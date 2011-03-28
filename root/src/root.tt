@@ -110,11 +110,13 @@ para a web.</p>
       </div><div class="slide" style="float: left; width: 681px;">
         <img alt="Larry Wall - criador do Perl" src="/static/images/larry.jpg">
         <h1 class="nome">Larry Wall</h1>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
-wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
-lobortis nisl ut aliquip ex ea commodo consequat.</p>
-      </div></div>
+		<p>
+Autor do patch, do rn, da linguagem Perl e da licen&ccedil;a art&iacute;stica, entre outras proezas, Larry Wall é a figura mais carismática do universo Perl e dispensa apresentações. Também
+trabalhou no renomado Laboratório de Propulsão a Jato da NASA e é
+co-autor do livro Programming Perl, . 
+Famoso por seu senso de humor único e um forte embasamento linguísco.
+</p>      
+</div></div>
 
       
 
