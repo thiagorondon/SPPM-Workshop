@@ -1,15 +1,17 @@
- 	<script type="text/javascript">
+<script type="text/javascript">
+
 $(document).ready(function(){
+
   var currentPosition = 0;
-  var slideWidth = 681;
-  var slides = $('.slide');
-  var numberOfSlides = slides.length;
+  var slideWidth      = 681;
+  var slides          = $('.slide');
+  var numberOfSlides  = slides.length;
 
   $('#slidesContainer').css('overflow', 'hidden');
 
   slides
-    .wrapAll('&lt;div id="slideInner"&gt;&lt;/div&gt;')
-	.css({
+    .wrapAll('<div id="slideInner"></div>')
+    .css({
       'float' : 'left',
       'width' : slideWidth
     });
@@ -17,51 +19,69 @@ $(document).ready(function(){
   $('#slideInner').css('width', slideWidth * numberOfSlides);
 
   $('#slideshow')
-    .prepend('&lt;span class="control" id="leftControl"&gt;Clicking moves
-left&lt;/span&gt;')
-    .append('&lt;span class="control" id="rightControl"&gt;Clicking moves
-right&lt;/span&gt;');
+    .prepend('<span class="control" id="leftControl"></span>')
+    .append('<span class="control" id="rightControl"></span>');
 
   manageControls(currentPosition);
 
   $('.control')
-    .bind('click', function(){
-	clearInterval(intSlide);
-	currentPosition = ($(this).attr('id')=='rightControl') ?
-currentPosition+1 : currentPosition-1;
-    manageControls(currentPosition);
-    $('#slideInner').animate({
-      'marginLeft' : slideWidth*(-currentPosition)
-    });
+    .bind('click', function() {
+
+      clearInterval(intSlide);
+      currentPosition = ($(this).attr('id')=='rightControl') ? currentPosition+1 : currentPosition-1;
+      manageControls(currentPosition);
+
+      $('#slideInner').animate({
+        'marginLeft' : slideWidth*(-currentPosition)
+      });
+
   });
 
   function manageControls(position){
-	if(position==0){ $('#leftControl').hide() } else{
-$('#leftControl').show() }
-    if(position==numberOfSlides-1){ $('#rightControl').hide() } else{
-$('#rightControl').show() }
+    
+    if (position==0) { 
+      $('#leftControl').hide()
+    } else { 
+      $('#leftControl').show()
+    }
+    
+    if (position==numberOfSlides-1) { 
+      $('#rightControl').hide() 
+    } else { 
+      $('#rightControl').show() 
+    }
+
   }
-	intSlide = setInterval(function() {
-		if (currentPosition &lt; numberOfSlides-1){
-			currentPosition = currentPosition+1;
-			manageControls(currentPosition);
-			$('#slideInner').animate({
-		      'marginLeft' : slideWidth*(-currentPosition)
-		    });
-		}else{
-			currentPosition = 0;
-			manageControls(currentPosition);
-			$('#slideInner').animate({
-		      'marginLeft' : slideWidth*(-currentPosition)
-		    });
-		}
-	}, 5000);
+
+  intSlide = setInterval(function() {
+
+    if (currentPosition < numberOfSlides-1){
+
+      currentPosition = currentPosition+1;
+      manageControls(currentPosition);
+
+      $('#slideInner').animate({
+        'marginLeft' : slideWidth*(-currentPosition)
+      });
+
+    }else{
+
+      currentPosition = 0;
+      manageControls(currentPosition);
+
+      $('#slideInner').animate({
+        'marginLeft' : slideWidth*(-currentPosition)
+
+      });
+    }
+  }, 5000);
 });
 
 </script>
 
- <div id="slideshow"><span id="leftControl" class="control" style="display:
-block;">Clicking moves left</span>
+
+
+ <div id="slideshow">
     <div id="slidesContainer" style="overflow: hidden;">
 
       <div id="slideInner" style="width: 2043px; margin-left: -1362px;"><div
@@ -100,8 +120,7 @@ lobortis nisl ut aliquip ex ea commodo consequat.</p>
 
       
     </div>
-  <span id="rightControl" class="control" style="display: none;">Clicking moves
-right</span></div>
+</div>
   <br>
   <div class="patrocinio">
 	<table width="100%">
