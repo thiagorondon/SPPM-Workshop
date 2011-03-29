@@ -42,7 +42,7 @@ As inscri&ccedil;&otilde;es ser&atilde;o realizadas atrav&eacute;s deste formula
 			CPF:
 		</td>
 		<td>
-			<input type="text" name="cpf" id="cpf" size="14">
+			<input type="text" name="cpf" id="cpf" size="18">
 		</td>
 	</tr>
 
@@ -51,7 +51,7 @@ As inscri&ccedil;&otilde;es ser&atilde;o realizadas atrav&eacute;s deste formula
 			Celular:
 		</td>
 		<td>
-			<input type="text" name="celular" id="celular" size="14">
+			<input type="text" name="celular" id="celular" size="18">
 		</td>
 	</tr>
 	<tr>
@@ -59,7 +59,7 @@ As inscri&ccedil;&otilde;es ser&atilde;o realizadas atrav&eacute;s deste formula
 			Digite o c&oacute;digo abaixo:
 		</td>
 		<td>
-			<input type="text" name="captcha" id="captcha" size="14" maxlength="8">
+			<input type="text" name="captcha" id="captcha" size="18" maxlength="8">
 		</td>
 	</tr>
 	<tr>
