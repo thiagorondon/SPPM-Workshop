@@ -18,9 +18,12 @@ requires 'Email::Valid';
 requires 'String::Random';
 requires 'PagSeguro';
 requires 'Moose';
+requires 'Business::BR::CPF';
 requires 'MooseX::Types::CPF';
 requires 'MooseX::Types::Email';
 requires 'namespace::autoclean';
+requires 'Net::SMTP::SSL';
+requires 'Authen::SASL';
 requires
   'Config::General';  # This should reflect the config file format you've chosen
                       # See Catalyst::Plugin::ConfigLoader for supported formats
