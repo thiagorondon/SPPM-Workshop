@@ -3,6 +3,7 @@ use Moose;
 use namespace::autoclean;
 
 use Catalyst::Runtime 5.80;
+use Sys::Hostname;
 
 # Set flags and add plugins for the application.
 #
@@ -29,6 +30,9 @@ extends 'Catalyst';
 
 our $VERSION = '0.01';
 
+my $user = $ENV{USER};
+my $host = Sys::Hostname::hostname();
+
 # Configure the application.
 #
 # Note that settings in sppm_workshop.conf (or other external
@@ -46,6 +50,11 @@ __PACKAGE__->config(
     default_view                                => 'TT',
     default_model                               => 'DB',
 
+#    'Plugin::ConfigLoader' => {
+#        file => __PACKAGE__->path_to('conf'),
+#        config_local_suffix => "${user}_${host}"
+#    },
+
     'Plugin::Captcha' => {
         session_name => 'captcha_string',
         new          => {
@@ -57,7 +66,7 @@ __PACKAGE__->config(
             ptsize  => 30,
             font => join( '/', __PACKAGE__->path_to('fonts'), 'StayPuft.ttf' ),
         },
-        create   => [qw/ttf ec #ffffff/],
+        create   => ['ttf', 'ec', '#ffffff'],
         particle => [100],
         out      => { force => 'jpeg' }
     }
