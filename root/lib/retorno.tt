@@ -2,9 +2,13 @@
 [% IF erro %]
 <div class="erro">
 
+<div class="round">
+<ul>
 [% FOREACH key IN erro.keys %]
-	[% erro.$key %]<br/>
+<li><font color="red">[% erro.$key %].</font></li>
 [% END %]
+</ul>
+</div>
 
 </div>
 [% END %]

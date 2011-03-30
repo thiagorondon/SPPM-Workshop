@@ -1,13 +1,11 @@
 
 <h2>Programa&ccedil;&atilde;o: </h2>
 
-<div class="round">
 <p>
-Abaixo a programa&ccedil;&atilde; do evento, as palestras que ser&atilde;o apresentadas em ingl&ecirc;s ter&aacute; tradu&ccedil;&atilde;o simultanea.
+Abaixo a programa&ccedil;&atilde; do evento, as palestras que ser&atilde;o apresentadas em ingl&ecirc;s terão tradução simultanea.
 </p>
 
 <center>
-<div class="round">
 
 <table cellspacing=0 cellpadding=0 class="programacao">
 	<tr class="titulo1">
@@ -78,10 +76,11 @@ Abaixo a programa&ccedil;&atilde; do evento, as palestras que ser&atilde;o apres
 			Wagner Elias,<br/>OWASP
 		</td>
 		<td>
-			()
+			Thiago Rondon, <br/>
+			OpenData-BR
 		</td>
 		<td>
-			Alexei Znamensky,<br/>DataFlow
+			Alexei&nbsp;Znamensky,<br/>DataFlow
 		</td>
 	</tr>
 	<tr class="dados">
@@ -100,7 +99,9 @@ Abaixo a programa&ccedil;&atilde; do evento, as palestras que ser&atilde;o apres
 	</tr>
 </table>
 
-</div>
 </center>
 
-</div>
+<p>
+Nota: A programação pode ser alterada sem aviso prévio.
+</p>
+

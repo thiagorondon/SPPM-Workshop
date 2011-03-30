@@ -6,11 +6,24 @@
 
 <form name="cadastro" method="POST">
 
-<div class="roundS">
 <p>
-As inscri&ccedil;&otilde;es ser&atilde;o realizadas atrav&eacute;s deste formulario. O valor das inscri&ccedil;&otilde;es &eacute; de R$ 200,00, basta preencher os dados abaixo e efetuar o pagamento.
+Ao se inscrever no Workshop, além das palestras de altíssimo nível, você terá acesso a uma infra-estrutura completa, incluindo:
 </p>
- 
+<ul>
+<li>Estacionamento para os primeiros 30 carros.</li>
+<li>Café da manhã <font color="#949494">(café, bolachas salgadas, 2 tipos de petit four doce).</font></li>
+<li>Tradução simultânea durante as palestras internacionais <font color="#949494">(equipamento e intérprete)</font>.</li>
+<li>Kit para almoço <font color="#949494">(suco, iogurte, 2 tipos de mini-lanches, 2 tipos de salgado, 2 tipos de bolo, maçã, petit four, café, leite, cappuccino).</font></li>
+<li>Área de confraternização com todos os palestrantes e outros participantes.</li>
+<li>Café da tarde.</li>
+
+</ul>
+<p>
+Para fazer sua inscrição, basta preencher o formulário abaixo. O valor da inscrição é de R$300,00, mas <strong>os primeiros 100 inscritos</strong> terão um 
+desconto especial, pagando apenas <strong>R$200,00! Aproveite!</strong> Você pode ainda parcelar sua inscrição em até 3x sem juros no cartão.
+Não perca tempo, as vagas são limitadas!
+</center>
+
 <table cellpadding="4">
 	<tr>
 		<td class="label">
@@ -22,7 +35,7 @@ As inscri&ccedil;&otilde;es ser&atilde;o realizadas atrav&eacute;s deste formula
 	</tr>
 	<tr>
 		<td class="label">
-			Apelido:
+			Apelido (opcional)*:
 		</td>
 		<td>
 			<input type="text" name="apelido" id="apelido" size="35" maxlength="250">
@@ -39,16 +52,7 @@ As inscri&ccedil;&otilde;es ser&atilde;o realizadas atrav&eacute;s deste formula
 	
 	<tr>
 		<td class="label">
-			CPF:
-		</td>
-		<td>
-			<input type="text" name="cpf" id="cpf" size="18">
-		</td>
-	</tr>
-
-	<tr>
-		<td class="label">
-			Celular:
+			Celular (opcional) **:
 		</td>
 		<td>
 			<input type="text" name="celular" id="celular" size="18">
@@ -77,6 +81,19 @@ As inscri&ccedil;&otilde;es ser&atilde;o realizadas atrav&eacute;s deste formula
 		</td>
 	</tr>
 </table>
-</div>
+<p>
+<small>* Para ser impresso na credencial, junto com o nome.</small><br/>
+<small>** Para receber notificações sobre o evento via SMS.</small>
+</p>
 <form>
+
+
+<center>
+<p>Formas de pagamento: </p>
+<img src="/static/images/sprite_flags.gif"/>
+<br/><br/>
+<p>Cartão de crédito, transferência eletrônica e boleto bancário.</p>
+
+<center>
+
 

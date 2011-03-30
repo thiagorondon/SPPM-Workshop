@@ -43,35 +43,36 @@ sub inscricao : Chained('object') PathPart('') Args(0) {
     $c->stash->{erro}{email}     = q{Favor fornecer um email}
       unless Email::Valid->address( $params->{email} );
 
-    $c->stash->{mensagem}{celular} = q{*};
-    $c->stash->{erro}{celular}     = q{Favor fornecer o celular}
-      unless $params->{celular};
+    #    $c->stash->{mensagem}{celular} = q{*};
+    #    $c->stash->{erro}{celular}     = q{Favor fornecer o celular}
+    #      unless $params->{celular};
 
-    $c->stash->{mensagem}{cpf} = q{*};
-    $c->stash->{erro}{cpf}     = q{Favor fornecer o cpf}
-      unless test_cpf( $params->{cpf} );
+    #    $c->stash->{mensagem}{cpf} = q{*};
+    #    $c->stash->{erro}{cpf}     = q{Favor fornecer o cpf}
+    #      unless test_cpf( $params->{cpf} );
+
+    $c->stash->{erro}{captcha} = q{Captcha não confere}
+      unless $c->validate_captcha( $c->req->param('captcha') );
 
     return if %{ $c->stash->{erro} || {} };
 
     return unless $c->req->method eq 'POST';
-
-    $c->stash->{erro}{captcha} = q{Captcha não confere}
-      unless $c->req->address eq '127.0.0.1'
-          and $c->validate_captcha( $c->req->param('captcha') );
 
     $c->stash->{inscricao}->insert;
     $c->forward('gerar_codigo');
 
     $c->stash(
         email_to      => $params->{email},
-        email_subject => 'Código de confirmação',
-        email_content => 'teste',
-		sms_to => $params->{celular},
-        sms_content   => "Seu codigo de ativacao: "
+        email_subject => 'Inscrição',
+        email_content => $c->model('Email')->template(
+            'inscricao', $params->{nome}, $c->stash->{inscricao}->codigo
+        ),
+        sms_to      => $params->{celular},
+        sms_content => "Seu codigo de ativacao: "
           . $c->stash->{inscricao}->codigo,
     );
 
-	$c->forward('View::SMS');
+    #$c->forward('View::SMS');
     $c->forward('View::Email');
 
     $c->res->redirect(
@@ -85,14 +86,14 @@ sub inscricao : Chained('object') PathPart('') Args(0) {
 sub confirmar : Chained('base') Args(1) {
     my ( $self, $c, $id ) = @_;
 
-    return unless $c->req->method eq 'POST';
+    #    return unless $c->req->method eq 'POST';
     my $rs       = $c->stash->{inscricoes};
     my $inscrito = $rs->find($id);
 
-    $c->stash->{erro}{codigo} = q{Código errado}
-      unless uc( $c->req->param('codigo') ) eq $inscrito->codigo;
+    #    $c->stash->{erro}{codigo} = q{Código errado}
+    #      unless uc( $c->req->param('codigo') ) eq $inscrito->codigo;
 
-    return if %{ $c->stash->{erro} || {} };
+    #    return if %{ $c->stash->{erro} || {} };
 
     $inscrito->update( { confirmado => 1 } );
 
@@ -106,7 +107,7 @@ sub pagamento : Chained('base') Args(1) {
     my $inscrito = $c->stash->{inscrito} =
       $rs->search( { codigo => $codigo, confirmado => 1 } )->first;
 
-    $c->stash->{erro}{codigo} = qw{Pagamento_invalido}
+    $c->stash->{erro}{codigo} = q{Pagamento inválido}
       unless $inscrito;
 
     return if %{ $c->stash->{erro} || {} };
