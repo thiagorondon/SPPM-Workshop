@@ -50,14 +50,27 @@ Ele ainda é mantenedor da perlfaq
 
 	</div>
 	
-	<div class="palestrante">
-		<img src="/static/images/alexei.png" border="0">
-		<h2>Alexei "Russo" Znamensky</h2>
-	<p>
+    <div class="palestrante">
+        <img src="/static/images/alexei.png" border="0">
+        <h2>Alexei "Russo" Znamensky</h2>
+
+<p>
 É um entusiasta de software livre, usuário de Linux desde 1995, programa em Perl desde 1996. Já atuou em projetos de desenvolvimento em várias linguagens, mas atualmente está focado em administração de sistemas. É membro atuante na São Paulo Perl Mongers, e tem alguns módulos publicados no CPAN.
-</p>	
+</p>
 
 
-	</div>
-	
+    </div>
+
+
+    <div class="palestrante">
+        <img src="/static/images/rodrigo.jpg" width="240" height="145" border="0">
+        <h2>Rodrigo Campos</h2>
+    <p>Rodrigo Campos (@xinu) trabalha com administração de sistemas desde 1995, nesses 16 anos passou por projetos como a implementação do Linux para S/390, implantação de Data Centers, migração de sistemas de grande porte e a construção de sistemas para consolidação e visualização de dados. Membro ativo do <a href="http://regions.cmg.org/regions/cmgbrazil/Sobre.html">CGM Brasil</a>, estuda metodologias de planejamento de capacidade que possam ser aplicadas em ambientes distribuído
+s de forma ágil e eficiente.
+</p>
+
+
+    </div>
+
+
 </div>
