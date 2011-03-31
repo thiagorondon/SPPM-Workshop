@@ -89,14 +89,25 @@ class="slide" style="float: left; width: 681px;">
         <img alt="Brian D Foy - contribuidor do
 perldoc" src="/static/images/brian.jpg">
         <h1 class="nome">Brian d Foy </h1>
-        <p>Fundador do primeiro grupo Perl Mongers, Nova York. Foy é
-contribuidor do perldoc, co-autor de Learning Perl, Intermediate Perl, do 
-Effective Perl Programming, autor de Mastering Perl e ainda mantenedor do <a
-href="http://www.theperlreview.com">The Perl Review</a>.</p>
+        <p>
+Al&eacute;m de apaixonado por Perl e referência na comunidade, é autor e co-autor 
+de vários livros, como 
+<a href="http://en.wikipedia.org/wiki/Learning_Perl">Learning Perl</a>, 
+<a href="http://en.wikipedia.org/wiki/Intermediate_Perl">Intermediate Perl</a>, 
+<a href="http://en.wikipedia.org/wiki/Mastering_Perl">Mastering Perl</a>, 
+e autor de <a href="http://search.cpan.org/~bdfoy/">vários módulos no CPAN</a>
+, fundou o <a href="http://en.wikipedia.org/wiki/Perl_Mongers">Perl Mongers</a>, 
+do White Camel Awards. De 1998 e 2009 trabalhou na
+<a href="http://www.stonehenge.com/">Stonehenge Consulting Services</a>. Atual 
+mantenedor do <a href="http://faq.perl.org/">perlfaq</a>, Brian é
+figurinha carimbada em diversos eventos Perl no mundo.
+
+</p>
+
       </div><div class="slide" style="float: left; width: 681px;">
         <img alt="Brad FitzPatrick - criador do
 Memcached" src="/static/images/brad.jpg">
-        <h1 class="nome">Brad FitzPatrick</h1>
+        <h1 class="nome">Brad FritzPatrick</h1>
         <p>Brad Fitzpatrick é o fundador da <a href="http://danga.com">
 Danga</a> e um ativo contribuidor da comunidade Perl. A Danga fundou projetos
 como <a href="http://livejournal.com">livejournal</a>, 
@@ -110,13 +121,11 @@ para a web.</p>
       </div><div class="slide" style="float: left; width: 681px;">
         <img alt="Larry Wall - criador do Perl" src="/static/images/larry.jpg">
         <h1 class="nome">Larry Wall</h1>
-		<p>
-Autor do patch, do rn, da linguagem Perl e da licen&ccedil;a art&iacute;stica, entre outras proezas, Larry Wall é a figura mais carismática do universo Perl e dispensa apresentações. Também
-trabalhou no renomado Laboratório de Propulsão a Jato da NASA, é
-co-autor do livro Programming Perl, e ainda é  
-famoso por seu senso de humor único.
-</p>      
-</div></div>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
+wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
+lobortis nisl ut aliquip ex ea commodo consequat.</p>
+      </div></div>
 
       
 
@@ -147,6 +156,8 @@ src="/static/images/logo_spperlmongers.gif">
 src="/static/images/logo_caelum.gif">
 				<img border="0"
 src="/static/images/logo_globo.gif">
+				<img border="0"
+src="/static/images/logo_locaweb.gif">
 			</td>
 			<td><span class="titulo">Apoio:</span></td>
 		</tr>
