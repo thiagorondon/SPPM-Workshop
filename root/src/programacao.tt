@@ -21,7 +21,7 @@ Abaixo a programa&ccedil;&atilde; do evento, as palestras que ser&atilde;o apres
 			9h
 		</td>
 		<td colspan="3">
-			Brian d Foy: Moose 
+			<a href="/palestrantes#brian">Brian d Foy</a>: Moose 
 		</td>
 	</tr>
 	<tr class="dados">
@@ -29,7 +29,7 @@ Abaixo a programa&ccedil;&atilde; do evento, as palestras que ser&atilde;o apres
 			10h
 		</td>
 		<td colspan="3">
-			Brad FitzPatrick:  "Camlistore, um sistema de storage voltado para a web"
+			<a href="/palestrantes#brad">Brad FitzPatrick:</a>  "Camlistore, um sistema de storage voltado para a web"
 		</td>
 	</tr>
 	<tr class="dados">
@@ -37,7 +37,7 @@ Abaixo a programa&ccedil;&atilde; do evento, as palestras que ser&atilde;o apres
 			11h30
 		</td>
 		<td colspan="3">
-			Larry Wall
+			<a href="/palestrantes#larry">Larry Wall</a>
 		</td>
 	</tr>
 	<tr class="titulo2">
@@ -59,10 +59,13 @@ Abaixo a programa&ccedil;&atilde; do evento, as palestras que ser&atilde;o apres
 			13h30
 		</td>
 		<td>
-			Vagner Diniz,<br/> W3C,&nbsp;Formatos&nbsp;abertos
+			<a href="/palestrantes#andregarcia">André Garcia</a>,<br/>Empreendedorismo na Internet
 		</td>
 		<td>
-			Solli&nbsp;Honorio,<br/>Relacionamento&nbsp;com&nbsp;MongoDB
+
+                        <a href="/palestrantes#thiagorondon">Thiago Rondon</a>, <br/>
+                        OpenData-BR
+
 		</td>
 		<td>
 			Eden Cardim,<br/> Classes Remotas
@@ -76,11 +79,12 @@ Abaixo a programa&ccedil;&atilde; do evento, as palestras que ser&atilde;o apres
 			Wagner Elias,<br/>OWASP
 		</td>
 		<td>
-			Thiago Rondon, <br/>
-			OpenData-BR
+
+			<a href="/palestrantes#alexei">Alexei&nbsp;Znamensky</a>,<br/>DataFlow
+
 		</td>
 		<td>
-			Alexei&nbsp;Znamensky,<br/>DataFlow
+                       Solli&nbsp;Honorio,<br/>Relacionamento&nbsp;com&nbsp;MongoDB
 		</td>
 	</tr>
 	<tr class="dados">
@@ -88,11 +92,12 @@ Abaixo a programa&ccedil;&atilde; do evento, as palestras que ser&atilde;o apres
 			15h30
 		</td>
 		<td>
-			Rodrigo Campos,<br/>
+			<a href="/palestrantes#rodrigocampos">Rodrigo Campos</a>,<br/>
 			Capacity Planning for fun & profit - beyond cacti and top
 		</td>
 		<td>
-		 ()	
+			Vagner Diniz,<br/> W3C,&nbsp;Formatos&nbsp;abertos
+
 		</td>
 		<td>
 			Breno Oliveira,<br/>Devel::Cover

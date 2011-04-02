@@ -134,7 +134,7 @@ class="titulo">Patrocínio:</span></td>
 	  	<tr>
 			<td>Gold:</td>
 			<td><img border="0"
-src="/static/images/logo_estantevirtual.gif"></td>
+src="/static/images/LogoEVtransparente.png"></td>
 			<td>
 				<img border="0"
 src="/static/images/logo_spperlmongers.gif">
@@ -160,6 +160,8 @@ src="/static/images/logo_globo.gif">
 src="/static/images/logo_w3c.gif">
 				<img border="0"
 src="/static/images/logo_oreilly.gif">
+				<img border="0"
+src="/static/images/logo_oz.png">
 			</td>
 		</tr>
 	</tbody></table>

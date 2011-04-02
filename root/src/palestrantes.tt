@@ -2,7 +2,7 @@
 <h2>Palestrantes</h2>
 
 <div class="roundG">
-	
+	<a name="larry"></a>
 	<div class="palestrante">
 		<img src="/static/images/larry.jpg" border="0">
 		<h2>Larry Wall</h2>
@@ -18,7 +18,7 @@ facilitar as tarefas fáceis sem tornar as difíceis impossíveis. É
 definiftivamente uma cara em quem se inspirar.</p>
 	</div>
 	
-
+	<A name="brad"></a>
 	<div class="palestrante">
 		<img src="/static/images/brad.jpg" border="0">
 		<h2>Brad Fitzpatrick</h2>
@@ -32,7 +32,7 @@ Brasil, irá palestrar em primeira mão sobre seu novo projeto, o
 <a href="http://camlistore.org">camlistore</a>, um sistema de storage voltado
 para a web.</p>	
 	</div>
-	
+	<a name="brian"></a>
 	<div class="palestrante">
 		<img src="/static/images/brian.jpg" border="0">
 		<h2>brian d foy</h2>
@@ -49,7 +49,7 @@ Ele ainda é mantenedor da perlfaq
 
 
 	</div>
-	
+	<a name="alexei"></a>
     <div class="palestrante">
         <img src="/static/images/alexei.png" border="0">
         <h2>Alexei "Russo" Znamensky</h2>
@@ -61,9 +61,9 @@ Ele ainda é mantenedor da perlfaq
 
     </div>
 
-
+    <a name="rodrigocampos"></a>
     <div class="palestrante">
-        <img src="/static/images/rodrigo.jpg" width="240" height="145" border="0">
+        <img src="/static/images/rodrigo.jpg" border="0">
         <h2>Rodrigo Campos</h2>
     <p>Rodrigo Campos (@xinu) trabalha com administração de sistemas desde 1995, nesses 16 anos passou por projetos como a implementação do Linux para S/390, implantação de Data Centers, migração de sistemas de grande porte e a construção de sistemas para consolidação e visualização de dados. Membro ativo do <a href="http://regions.cmg.org/regions/cmgbrazil/Sobre.html">CGM Brasil</a>, estuda metodologias de planejamento de capacidade que possam ser aplicadas em ambientes distribuído
 s de forma ágil e eficiente.
@@ -72,5 +72,27 @@ s de forma ágil e eficiente.
 
     </div>
 
+	<a name="andregarcia"></a>	
+    <div class="palestrante">
+        <img src="/static/images/andre.jpg" border="0">
+        <h2>André Garcia</h2>
 
+<p>
+é formado em Administração de Empresas pela Universidade Federal do Rio de Janeiro (UFRJ). Especialista em Recursos Humanos e Marketing, atuou por 9 anos em grandes empresas dos mercados financeiro, energético e telecomunicações, nestas últimas na área de Inteligência de Mercado. Em 2003, abandonou as grandes empresas com vistas à vida acadêmica, o que o levou ao mestrado em Psicologia Social, na PUC-SP. Em 2004, após se deparar com a necessidade de buscar livros para sua dissertação, deu início ao projeto de criar um site que reunisse acervos de sebos do Brasil inteiro. Em outubro de 2005, colocou no ar a Estante Virtual, portal que hoje abriga mais de 1800 sebos de 324 cidades do país.
+</p>
+
+	<a name="thiagorondon"></a>	
+    <div class="palestrante">
+        <img src="/static/images/thiago.jpg" border="0">
+        <h2>Thiago Rondon</h2>
+
+<p>
+Contribuidor de projetos de software livre como o <a href="http://www.freeradius.org" target="_blank">Freeradius</a>, <a href="http://www.kernel.org" target="_blank">kernel do Linux</a>, dentre outros. Participante ativo em comunidades relacionadas a desenvolvimento, geoprocessamento e plataformas voip. Atualmente, esta estudando processos para visualização de dados governamentais através do projeto <a href="http://www.opendatabr.org/" target="_blank">OpenData-BR</a>.
+</p>
+
+</div>
+
+</div>
+
+ 
 </div>

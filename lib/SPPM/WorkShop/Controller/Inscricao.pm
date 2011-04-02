@@ -61,19 +61,19 @@ sub inscricao : Chained('object') PathPart('') Args(0) {
     $c->stash->{inscricao}->insert;
     $c->forward('gerar_codigo');
 
-    $c->stash(
-        email_to      => $params->{email},
-        email_subject => 'Inscrição',
-        email_content => $c->model('Email')->template(
-            'inscricao', $params->{nome}, $c->stash->{inscricao}->codigo
-        ),
-        sms_to      => $params->{celular},
-        sms_content => "Seu codigo de ativacao: "
-          . $c->stash->{inscricao}->codigo,
-    );
+    #$c->stash(
+    #    email_to      => $params->{email},
+    #    email_subject => 'Inscrição',
+    #    email_content => $c->model('Email')->template(
+    #        'inscricao', $params->{nome}, $c->stash->{inscricao}->codigo
+    #    ),
+    #    sms_to      => $params->{celular},
+    #    sms_content => "Seu codigo de ativacao: "
+    #      . $c->stash->{inscricao}->codigo,
+    #);
 
     #$c->forward('View::SMS');
-    $c->forward('View::Email');
+    #$c->forward('View::Email');
 
     $c->res->redirect(
         $c->uri_for(
