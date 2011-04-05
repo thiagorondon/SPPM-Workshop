@@ -60,6 +60,14 @@ Não perca tempo, as vagas são limitadas!
 	</tr>
 	<tr>
 		<td class="label">
+			Cupom Promocional (opcional) ***:
+		</td>
+		<td>
+			<input type="text" name="cupom" size="18">
+		</td>
+	</tr>
+	<tr>
+		<td class="label">
 			Digite o c&oacute;digo abaixo:
 		</td>
 		<td>
@@ -83,7 +91,9 @@ Não perca tempo, as vagas são limitadas!
 </table>
 <p>
 <small>* Para ser impresso na credencial, junto com o nome.</small><br/>
-<small>** Para receber notificações sobre o evento via SMS.</small>
+<small>** Para receber notificações sobre o evento via SMS.</small></br>
+<small>*** Código promocional</small><br/>
+
 </p>
 <form>
 

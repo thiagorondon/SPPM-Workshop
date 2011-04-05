@@ -26,7 +26,8 @@ sub object : Chained('base') PathPart('') CaptureArgs(0) {
 
     my $params = $c->req->body_parameters;
     delete $params->{captcha};
-    $c->stash->{inscricao} = $rs->new($params);
+    delete $params->{cupom};
+		$c->stash->{inscricao} = $rs->new($params);
 }
 
 sub inscricao : Chained('object') PathPart('') Args(0) {
@@ -43,22 +44,23 @@ sub inscricao : Chained('object') PathPart('') Args(0) {
     $c->stash->{erro}{email}     = q{Favor fornecer um email}
       unless Email::Valid->address( $params->{email} );
 
-    #    $c->stash->{mensagem}{celular} = q{*};
-    #    $c->stash->{erro}{celular}     = q{Favor fornecer o celular}
-    #      unless $params->{celular};
-
-    #    $c->stash->{mensagem}{cpf} = q{*};
-    #    $c->stash->{erro}{cpf}     = q{Favor fornecer o cpf}
-    #      unless test_cpf( $params->{cpf} );
-
     $c->stash->{erro}{captcha} = q{Captcha não confere}
       unless $c->validate_captcha( $c->req->param('captcha') );
+
+		my $cupom = $c->model('DB::Cupom')
+			->find({ value => $c->req->param('cupom') });
+			
+		if ( $c->req->param('cupom') ) {
+				$c->stash->{erro}{cupom} = q{Cupom não confere}
+					if ! $cupom or $cupom->id_inscricao;
+		}
 
     return if %{ $c->stash->{erro} || {} };
 
     return unless $c->req->method eq 'POST';
 
-    $c->stash->{inscricao}->insert;
+		$cupom->update( { id_inscricao => $c->stash->{inscricao}->id } ) if $cupom;
+		$c->stash->{inscricao}->insert;
     $c->forward('gerar_codigo');
 
     #$c->stash(
@@ -96,7 +98,7 @@ sub confirmar : Chained('base') Args(1) {
     #    return if %{ $c->stash->{erro} || {} };
 
     $inscrito->update( { confirmado => 1 } );
-
+	
     $c->res->redirect(
         $c->uri_for( $self->action_for('pagamento'), $inscrito->codigo ) );
 }
