@@ -7,7 +7,7 @@ __PACKAGE__->config(
     schema_class => 'SPPM::WorkShop::Schema',
     
     connect_info => {
-        dsn => 'dbi:SQLite:dbname=/home/sppw/perlworkshop.com.br/sppw.db',
+        dsn => 'dbi:SQLite:dbname=' . SPPM::WorkShop->path_to('sppw.db'),
         user => '',
         password => '',
     }
