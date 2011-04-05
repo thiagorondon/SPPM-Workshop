@@ -7,3 +7,10 @@ create table inscricao (
        codigo text,
        confirmado integer default 0
 );
+
+create table cupom (
+	value text primary key,
+	id_inscricao integer,
+	UNIQUE (id_inscricao)
+);
+
