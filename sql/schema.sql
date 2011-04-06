@@ -11,6 +11,7 @@ create table inscricao (
 create table cupom (
 	value text primary key,
 	id_inscricao integer,
+	desconto integer,
 	UNIQUE (id_inscricao)
 );
 

@@ -59,8 +59,8 @@ sub inscricao : Chained('object') PathPart('') Args(0) {
 
     return unless $c->req->method eq 'POST';
 
-		$cupom->update( { id_inscricao => $c->stash->{inscricao}->id } ) if $cupom;
 		$c->stash->{inscricao}->insert;
+		$cupom->update( { id_inscricao => $c->stash->{inscricao}->id } ) if $cupom;
     $c->forward('gerar_codigo');
 
     #$c->stash(
@@ -106,8 +106,11 @@ sub confirmar : Chained('base') Args(1) {
 sub pagamento : Chained('base') Args(1) {
     my ( $self, $c, $codigo ) = @_;
     my $rs       = $c->model('DB::Inscricao');
+		my $rs_cupom = $c->model('DB::Cupom');
+
     my $inscrito = $c->stash->{inscrito} =
       $rs->search( { codigo => $codigo, confirmado => 1 } )->first;
+	  my $cupom    = $rs_cupom->find({ id_inscricao => $inscrito->id });
 
     $c->stash->{erro}{codigo} = q{Pagamento inválido}
       unless $inscrito;
@@ -121,12 +124,15 @@ sub pagamento : Chained('base') Args(1) {
         cliente_email  => $inscrito->email
     );
 
+		# hard coding, 200 mangos é o valor default.
+	  my $preco = $cupom ? 200 - $cupom->desconto : 200;
+
     $pagseguro->add_items(
         PagSeguro::Item->new(
             id    => $inscrito->id,
             descr => "Perl Workshop SPPM 2011",
             quant => 1,
-            valor => "20000",
+            valor => $preco * 100,
             frete => 0,
             peso  => 0
         )

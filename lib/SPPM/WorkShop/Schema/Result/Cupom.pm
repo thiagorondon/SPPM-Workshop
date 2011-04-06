@@ -10,7 +10,9 @@ __PACKAGE__->add_columns(
 	"value",
 	{ data_type => "text", is_nullable => 0 },
 	"id_inscricao",
-	{ data_type => "integer", is_nullable => 1 }
+	{ data_type => "integer", is_nullable => 1 },
+	"desconto",
+	{ data_type => "integer", is_nullable => 0 }
 );
 
 __PACKAGE__->set_primary_key("value");
