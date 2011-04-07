@@ -40,6 +40,8 @@ sub evento : Chained('/base') Args(0) {}
 
 sub faq : Chained('/base') Args(0) {}
 
+sub divulgue : Chained('base') Args(0) {}
+
 sub error : Chained('base') : PathPart {
 }
 

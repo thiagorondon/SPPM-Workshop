@@ -1,0 +1,47 @@
+
+<h2>Divulgue !</h2>
+
+<p>Ajude a divulgar o evento, veja abaixo alguns exemplos de banners:</p>
+
+<h3>786 x 120</h3>
+<p>
+<a href="http://www.perlworkshop.com.br" target="sppw"><img src="http://www.perlworkshop.com.br/static/images/logo_divulgacao_big.png" border="0" width="700" height="106"/></a>
+</p>
+
+<br style="clear:both">
+
+<p>
+<textarea readonly="readonly" cols="60" rows="3">
+&lt;a href="http://www.perlworkshop.com.br" target="sppw"&gt;&lt;img src="http://www.perlworkshop.com.br/static/images/logo_divulgacao_big.png" border="0" /&gt;&lt;/a&gt;
+</textarea>
+</p>
+
+
+<h3>490 x 196</h3>
+
+<p>
+<A href="http://www.perlworkshop.com.br" target="sppw"><img src="http://www.perlworkshop.com.br/static/images/logo_divulgacao.png" border="0"></a>
+</p>
+
+<br style="clear:both">
+
+<p>
+<textarea readonly="readonly" cols="60" rows="3">
+&lt;a href="http://www.perlworkshop.com.br" target="sppw"&gt;&lt;img src="http://www.perlworkshop.com.br/static/images/logo_divulgacao.png" border="0" /&gt;&lt;/a&gt;
+</textarea>
+</p>
+
+
+<h3>236 x 60</h3>
+<p>
+<a href="http://www.perlworkshop.com.br" target="sppw"><img src="http://www.perlworkshop.com.br/static/images/logo_divulgacao_small.png" border="0"></a>
+</p>
+
+<br style="clear:both">
+<p>
+<textarea readonly="readonly" cols="60" rows="3">
+&lt;a href="http://www.perlworkshop.com.br" target="sppw"&gt;&lt;img src="http://www.perlworkshop.com.br/static/images/logo_divulgacao_small.png" border="0" /&gt;&lt;/a&gt;
+</textarea>
+</p>
+
+
