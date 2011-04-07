@@ -127,6 +127,8 @@ sub pagamento : Chained('base') Args(1) {
 		# hard coding, 200 mangos é o valor default.
 	  my $preco = $cupom ? 200 - $cupom->desconto : 200;
 
+	$c->stash->{preco} = $preco;
+	
     $pagseguro->add_items(
         PagSeguro::Item->new(
             id    => $inscrito->id,

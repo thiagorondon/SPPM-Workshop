@@ -9,6 +9,8 @@
 Olá [% inscrito.nome %], para finalizar a inscrição basta acessar o pagseguro para realizar o pagamento, clicando no link abaixo.
 </p>
 
+<p>Valor: R$ [% preco %],00</p>
+ 
 <center>
 	[% form %]
 </center>
