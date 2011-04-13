@@ -47,20 +47,28 @@ sub inscricao : Chained('object') PathPart('') Args(0) {
     $c->stash->{erro}{captcha} = q{Captcha não confere}
       unless $c->validate_captcha( $c->req->param('captcha') );
 
-		my $cupom = $c->model('DB::Cupom')
+	my $cupom;
+	if ($c->req->param('cupom') ) {
+
+		$cupom = $c->model('DB::Cupom')
 			->find({ value => $c->req->param('cupom') });
-			
-		if ( $c->req->param('cupom') ) {
-				$c->stash->{erro}{cupom} = q{Cupom não confere}
-					if ! $cupom or $cupom->id_inscricao;
-		}
+	
+		$cupom = $c->model('DB::Cupom')
+			->search(
+			{ ext => $c->req->param('cupom'), id_inscricao => ''})->first
+				if ! $cupom;
+		
+		$c->stash->{erro}{cupom} = q{Cupom não confere}
+			if ! $cupom or $cupom->id_inscricao;
+
+	}
 
     return if %{ $c->stash->{erro} || {} };
 
     return unless $c->req->method eq 'POST';
 
-		$c->stash->{inscricao}->insert;
-		$cupom->update( { id_inscricao => $c->stash->{inscricao}->id } ) if $cupom;
+    $c->stash->{inscricao}->insert;
+	$cupom->update( { id_inscricao => $c->stash->{inscricao}->id } ) if $cupom;
     $c->forward('gerar_codigo');
 
     #$c->stash(
@@ -109,8 +117,8 @@ sub pagamento : Chained('base') Args(1) {
 		my $rs_cupom = $c->model('DB::Cupom');
 
     my $inscrito = $c->stash->{inscrito} =
-      $rs->search( { codigo => $codigo, confirmado => 1 } )->first;
-	  my $cupom    = $rs_cupom->find({ id_inscricao => $inscrito->id });
+		$rs->search( { codigo => $codigo, confirmado => 1 } )->first;
+	my $cupom    = $rs_cupom->find({ id_inscricao => $inscrito->id });
 
     $c->stash->{erro}{codigo} = q{Pagamento inválido}
       unless $inscrito;

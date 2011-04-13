@@ -9,7 +9,7 @@ create table inscricao (
 );
 
 create table cupom (
-	value text primary key,
+	value text,
 	id_inscricao integer,
 	desconto integer
 );

@@ -62,10 +62,9 @@ Abaixo a programa&ccedil;&atilde;o do evento, as palestras que ser&atilde;o apre
 			<a href="/palestrantes#andregarcia">André Garcia</a>,<br/>Empreendedorismo na Internet
 		</td>
 		<td>
+			<a href="/palestrantes#vagnerdiniz">Vagner&nbsp;Diniz</a>&nbsp;e&nbsp;<a href="/palestrantes#carlinhos">Carlinhos&nbsp;Cecconi</a>,<br/> O futuro da web segundo o W3C
 
-                        <a href="/palestrantes#thiagorondon">Thiago Rondon</a>, <br/>
-                        OpenData-BR
-
+       
 		</td>
 		<td>
 			Eden Cardim,<br/> Classes Remotas
@@ -96,13 +95,23 @@ Abaixo a programa&ccedil;&atilde;o do evento, as palestras que ser&atilde;o apre
 			Capacity Planning for fun & profit - beyond cacti and top
 		</td>
 		<td>
-			Vagner Diniz,<br/> W3C,&nbsp;Formatos&nbsp;abertos
+                 <a href="/palestrantes#thiagorondon">Thiago Rondon</a>, <br/>
+                        OpenData-BR
 
 		</td>
 		<td>
 			Breno Oliveira,<br/>Devel::Cover
 		</td>
 	</tr>
+	<tr class="dados">
+		<td class="horario">
+			16h30
+		</td>
+		<td colspan="3">
+			<a href="/palestrantes#brad">Brad FitzPatrick</a>: A linguagem Go. (tradução não confirmada)
+		</td>
+	</tr>
+
 </table>
 
 </center>
