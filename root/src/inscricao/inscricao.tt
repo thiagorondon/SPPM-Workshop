@@ -29,7 +29,7 @@ Você pode ainda parcelar sua inscrição em até 3x sem juros no cartão. Não 
 			Nome:
 		</td>
 		<td>
-			<input type="text" name="nome" id="nome" size="35" maxlength="250">
+			<input type="text" name="nome" id="nome" size="35" maxlength="250" value="[% inscricao.nome %]">
 		</td>
 	</tr>
 	<tr>
@@ -37,7 +37,7 @@ Você pode ainda parcelar sua inscrição em até 3x sem juros no cartão. Não 
 			Apelido (opcional)*:
 		</td>
 		<td>
-			<input type="text" name="apelido" id="apelido" size="35" maxlength="250">
+			<input type="text" name="apelido" id="apelido" size="35" maxlength="250" value="[% inscricao.apelido %]">
 		</td>
 	</tr>
 	<tr>
@@ -45,7 +45,7 @@ Você pode ainda parcelar sua inscrição em até 3x sem juros no cartão. Não 
 			E-mail:
 		</td>
 		<td>
-			<input type="text" name="email" id="email" size="35" maxlength="250">
+			<input type="text" name="email" id="email" size="35" maxlength="250" value="[% inscricao.email %]">
 		</td>
 	</tr>
 	
@@ -54,7 +54,7 @@ Você pode ainda parcelar sua inscrição em até 3x sem juros no cartão. Não 
 			Celular (opcional) **:
 		</td>
 		<td>
-			<input type="text" name="celular" id="celular" size="18">
+			<input type="text" name="celular" id="celular" size="18" value="[% inscricao.celular %]">
 		</td>
 	</tr>
 	<tr>
@@ -62,7 +62,7 @@ Você pode ainda parcelar sua inscrição em até 3x sem juros no cartão. Não 
 			Cupom Promocional (opcional) ***:
 		</td>
 		<td>
-			<input type="text" name="cupom" size="18">
+			<input type="text" name="cupom" size="18" value="[% inscricao.cupom %]">
 		</td>
 	</tr>
 	<tr>
